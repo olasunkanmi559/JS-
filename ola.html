@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div style="border-bottom: 5px solid black; border-top: 5px solid black; margin-top: 10px;">
+            <div>
+                <h1 style="text-align: center;">
+                    DIFFERENCE BETWEEN LET, VAR AND CONST
+                </h1>
+                <h3>
+                    By Sarah Chima Atuonwu
+                </h3>
+                <p>
+                    A lot of shiny new features came out with ES2015 (ES6). And now, since it's 2020, 
+                    it's assumed that a lot of JavaScript developers have become familiar with and have started using these features. <br><br>
+                    While this assumption might be partially true, it's still possible that some of these features remain a mystery to some devs. <br><br>
+                    One of the features that came with ES6 is the addition of let and const, which can be used for variable declaration. 
+                    The question is, what makes them different from good 
+                    ol' var which we've been using? If you are still not clear about this, then this article is for you. <br><br>
+                    In this article, we'll discuss var, let and const with respect to their scope, use, and hoisting. 
+                    As you read, take note of the differences between them that I'll point out. <br><br>
+                </p>
+                <h2 style="text-align: center;">
+                    VAR
+                </h2>
+                <p>
+                    Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, 
+                    though. That is why it was necessary for new ways to declare variables to emerge. 
+                    First, let's get to understand var more before we discuss those issues.
+                </p>
+                <h2>
+                    SCOPE OF VAR
+                </h2>
+                <p>
+                    Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped. <br><br>
+    
+                    The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window. <br><br>
+    
+                    var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function. <br><br>
+                </p>
+                <h2>
+                    HOSTING OF VAR
+                </h2>
+                <p>
+                    Hoisting is a JavaScript mechanism where variables and function declarations are moved to 
+                    the top of their scope before code execution. This means that if we do this:
+                </p> <br><br><br><br>
+                <h2 style="text-align: center;">
+                    LET
+                </h2>
+                <p>
+                    let is now preferred for variable declaration. 
+                    It's no surprise as it comes as an improvement to var declarations. 
+                    It also solves the problem with var that we just covered. Let's consider why this is so.
+                </p>
+                <h2>
+                    let is block scoped
+                </h2>
+                <p>
+                    A block is a chunk of code bounded by {}. A block lives in curly braces. 
+                    Anything within curly braces is a block. <br><br>
+                    So a variable declared in a block with let is only available for use within that block.
+                </p>
+                <h2>
+                    let can be updated but not re-declared.
+                </h2>
+                <p>
+                    Just like var, a variable declared with let can be updated within its scope. Unlike var, 
+                    a let variable cannot be re-declared within its scope. So while this will work: <br> <br>
+                </p>
+                <h2>
+                    Hosting of let
+                </h2>
+                <p>
+                    Just like var, let declarations are hoisted to the top. Unlike var which is initialized as undefined, 
+                    the let keyword is not initialized. 
+                    So if you try to use a let variable before declaration, you'll get a Reference Error.
+                </p> <br><br><br><br>
+                <h2 style="text-align: center;">
+                    CONST
+                </h2>
+                <p>
+                    Variables declared with the const maintain constant values. 
+                    const declarations share some similarities with let declarations.
+                </p>
+                <h2>
+                    const cannot be updated or re-declared
+                </h2>
+                <p>
+                    This means that the value of a variable declared with const remains the same within its scope. 
+                    It cannot be updated or re-declared. So if we declare a variable with const,
+                </p>
+                <h2>
+                    Hosting of const
+                </h2>
+                <p>
+                    Just like let, const declarations are hoisted to the top but are not initialized.
+                </p>
+                <p>
+                    So just in case you missed the differences, here they are:
+                </p>
+               <ul>
+                    <li>var declarations are globally scoped or function scoped while let and const are block scoped.</li>
+                    <li>var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.</li>
+                    <li>They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.</li>
+                    <li>While var and let can be declared without being initialized, const must be initialized during declaration.</li>
+               </ul>
+            </div> <br><br><br><br><br><br>'
+    
+    
+            <div>
+                <h1>
+                    SIMILARITIES BETWEEN LET, VAR AND CONST
+                </h1>
+                <ul>
+                    <li><strong>DECLARATION:</strong>All of them are used in the declaration of variables.</li>
+                    <li><strong>DATA TYPE:</strong>Can be used with data type.</li>
+                    <li><strong>SCOPE:</strong>All three have scope whether global or block.</li>
+                    <li><strong>ACCESSIBILITY:</strong>Variables declared with <strong>LET, VAR,CONST</strong> can be accessed and used in expressions.</li>
+                    <li><strong>JAVASCRIPT SYNTAX:</strong>Part of javaScript, used in scripts, functions and loops</li>
+                </ul>
+            </div> 
+        </div> <br><br><br>
+
+        <a href="index.html" style="text-decoration: none; margin-left: 650px; background: blueviolet; padding: 3px; color: white;">PREVIOUS</a>     
+
+
+</body>
+</html>
