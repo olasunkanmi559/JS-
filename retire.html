@@ -41,11 +41,11 @@
         let thisyear= new Date().getFullYear();
         alert(`You are ${agecal(a,thisyear)} years old`);
         if(age>agecal(a,thisyear)){
-            console.log(`You should retire in ${age - agecal(a,thisyear)+thisyear}`)
+            console.log(`You should retire in ${age - agecal(a,thisyear)} years`)
         }else if(age==agecal(a,thisyear)){
             console.log('You can retire now')
         }else{
-            console.log(`You should have retired in ${thisyear -(agecal(a, thisyear)-age)}`)
+            console.log(`You should have retired in ${thisyear -(agecal(a, thisyear))} years`)
         }
     </script>
 
