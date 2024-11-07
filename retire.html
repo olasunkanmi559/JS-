@@ -6,10 +6,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      code{
+            /* background: black; */
+            /* color: white;  */
+            padding: 50px;
+            margin-top: 100px;
+            text-align: center;
+            width: fit-content;
+      }
+    </style>
 </head>
 <body>
 
-    <div style="border-bottom: 5px solid black; border-top: 5px solid black; margin-top: 10px;">
+    <div style="border-top: 5px solid black; margin-top: 10px;">
         <div class="over">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
@@ -24,7 +34,7 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
                       <li><a class="dropdown-item" href="retire.html">Retire date calcuator</a></li>
-                      <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                      <li><a class="dropdown-item" href="simplecal.html">SIMPLE CALCULATOR</a></li>
                     </ul>
                   </div>
                 </ul>
@@ -41,13 +51,31 @@
         let thisyear= new Date().getFullYear();
         alert(`You are ${agecal(a,thisyear)} years old`);
         if(age>agecal(a,thisyear)){
-            console.log(`You should retire in ${age - agecal(a,thisyear)} years`)
+            alert(`You should retire in ${age - agecal(a,thisyear)} years`)
         }else if(age==agecal(a,thisyear)){
-            console.log('You can retire now')
+            alert('You can retire now')
         }else{
-            console.log(`You should have retired in ${thisyear -(agecal(a, thisyear))} years`)
+            alert(`You are too old for this job retire immediately`)
         }
     </script>
+
+    <code>
+      let age =65 <br>
+      function agecal (retire, dateofbirth){ <br>
+          return dateofbirth-retire <br>
+      } <br> <br>
+
+      let a = prompt('What year were you born?') <br>
+      let thisyear= new Date().getFullYear(); <br>
+      alert(`You are ${agecal(a,thisyear)} years old`); <br>
+      if(age>agecal(a,thisyear)){ <br>
+          alert(`You should retire in ${age - agecal(a,thisyear)} years`) <br>
+      }else if(age==agecal(a,thisyear)){ <br>
+          alert('You can retire now') <br>
+      }else{ <br>
+          alert(`You are too old for this job retire immediately`) <br>
+      } <br>
+    </code>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
