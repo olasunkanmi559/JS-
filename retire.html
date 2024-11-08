@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
       code{
-            /* background: black; */
-            /* color: white;  */
-            padding: 50px;
-            margin-top: 100px;
-            text-align: center;
-            width: fit-content;
+          padding: 50px;
+          margin-top: 100px;
+          text-align: center;
+          width: fit-content;
+      }
+      .inp{
+          outline: 2px solid yellow;
       }
     </style>
 </head>
@@ -33,49 +34,196 @@
                     </button>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
-                      <li><a class="dropdown-item" href="retire.html">Retire date calcuator</a></li>
-                      <li><a class="dropdown-item" href="simplecal.html">SIMPLE CALCULATOR</a></li>
+                      <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
+                      <!-- <li><a class="dropdown-item" href="simplecal.html">SIMPLE CALCULATOR</a></li> -->
                     </ul>
                   </div>
                 </ul>
               </nav>
         </div>
 
-    <script>
-         let age =65
-        function agecal (retire, dateofbirth){
-            return dateofbirth-retire
+     <div class="pen container" style="background: gold; padding: 90px;width: fit-content;">
+        <h3 class="text-center">RETIREMENT CALCULATOR</h3><br>
+        <input type="text" placeholder="What year were you born?" id="man">
+        <button onclick="calculate()" id="moon">Calculate when to retire</button>
+        <b><p class="answer"></p></b>
+    </div> 
+
+        
+<div style=" background: red ;padding: 50px;text-align: center;width: fit-content;margin-top: 50px;" class="container">
+  <h1>SIMPLE CALCULATOR</h1>
+    <input type="text" placeholder="FirstNo" id="input1"> <br> <br>
+    <span class="currentsymbol"></span>
+    <input type="text" placeholder="SecNo" id="input2"> <br> <br>
+    <span class="outputanswer"></span>
+    
+    <button onclick="addition()" class="but">+</button>
+    <button onclick="addit()" class="but">*</button> 
+    <button onclick="minus()" class="but">-</button> <br>
+    <button onclick="percent()" class="but">%</button> 
+    <button onclick="division()" class="but">/</button> <br>
+</div>   
+
+<!-- investment Calculator -->
+  <div class="col-sm container" style=" background: blue;padding: 50px;text-align: center;width: fit-content;margin-top: 50px;">
+    <h3 class="text-center">INVESTMENT CALCULATOR</h3><br>
+    <h4>What amount is your investment?</h4>
+    <input type="text" placeholder="How much do you want to invest?" id="mall">
+    <h6>How many months would you like to invest for?</h6>
+    <select id="sel">
+      <option selected value="1">Duration</option>
+      <option value="3">3 months</option>
+      <option value="6">6 months</option>
+      <option value="9">9 months</option>
+      <option value="12">12 months</option>
+      <option value="15">15 months</option>
+    </select>
+    <button style="margin-top: 10px;" onclick="cal()">Calculate your investment</button>
+    <P><b>NOTE:</b> Our investment rate is 20% interest</P>
+    <p class="output"></p>
+  </div>
+  
+  <script>
+    let retirementAge = 65;
+    let ageCalc = (yearOfBirth, currentYear) => {
+        return currentYear - yearOfBirth;
+    }
+    function calculate() {
+      let yearOfBirth = document.getElementById('man').value;  
+      if (isNaN(yearOfBirth) || yearOfBirth === "") {
+            alert("Please enter a valid year of birth.");
+            return;
+        }
+        let currentYear = new Date().getFullYear();
+        let age = ageCalc(Number(yearOfBirth), currentYear);
+
+        let remainingYears = retirementAge - age;
+
+        let result = '';
+        if (remainingYears > 0) {
+            result = `You will retire in ${remainingYears} years`;
+        } else if (remainingYears === 0) {
+            result = 'You can retire this year!';
+        } else {
+            result = `You should have retired ${-remainingYears} years ago`;
+        }
+        document.querySelector('.answer').innerText = result;
+    }
+    
+    function addition(){
+            let firstinp = document.querySelector('#input1').value;
+            firstinp=Number(firstinp);
+            let symbol = document.querySelector('.currentsymbol');
+            let Secinp = document.querySelector('#input2').value;
+            Secinp=Number(Secinp);
+            let mysign = document.querySelector('.outputanswer');
+
+            mysign.innerHTML= `=${firstinp+Secinp}`;
+        }  
+        function addit(){
+            let firstinp = document.querySelector('#input1').value;
+            firstinp=Number(firstinp);
+            let symbol = document.querySelector('.currentsymbol');
+            let Secinp = document.querySelector('#input2').value;
+            Secinp=Number(Secinp);
+            let mysign = document.querySelector('.outputanswer');
+
+            mysign.innerHTML= `=${firstinp*Secinp}`;
+        }  
+        function minus(){
+            let firstinp = document.querySelector('#input1').value;
+            firstinp=Number(firstinp);
+            let symbol = document.querySelector('.currentsymbol');
+            let Secinp = document.querySelector('#input2').value;
+            Secinp=Number(Secinp);
+            let mysign = document.querySelector('.outputanswer');
+
+            mysign.innerHTML= `=${firstinp-Secinp}`;
+        }
+        function percent(){
+            let firstinp = document.querySelector('#input1').value;
+            firstinp=Number(firstinp);
+            let symbol = document.querySelector('.currentsymbol');
+            let Secinp = document.querySelector('#input2').value;
+            Secinp=Number(Secinp);
+            let mysign = document.querySelector('.outputanswer');
+
+            mysign.innerHTML= `=${firstinp%Secinp}`;
         }
 
-        let a = prompt('What year were you born?')
-        let thisyear= new Date().getFullYear();
-        alert(`You are ${agecal(a,thisyear)} years old`);
-        if(age>agecal(a,thisyear)){
-            alert(`You should retire in ${age - agecal(a,thisyear)} years`)
-        }else if(age==agecal(a,thisyear)){
-            alert('You can retire now')
-        }else{
-            alert(`You are too old for this job retire immediately`)
+        function division(){
+            let firstinp = document.querySelector('#input1').value;
+            firstinp=Number(firstinp);
+            let symbol = document.querySelector('.currentsymbol');
+            let Secinp = document.querySelector('#input2').value;
+            Secinp=Number(Secinp);
+            let mysign = document.querySelector('.outputanswer');
+
+            mysign.innerHTML= `=${firstinp/Secinp}`;
+        }
+
+        function cal() {
+        let investment = document.getElementById('mall').value;
+        let duration = document.getElementById('sel').value;
+        if (isNaN(investment) || investment <= 0) {
+            alert("Please enter a valid investment amount.");
+            return; 
+        }
+        if (isNaN(duration) || duration <= 0) {
+            alert("Please enter a valid duration in months.");
+            return; 
+        }
+        investment = Number(investment);
+        duration = Number(duration);    
+        let interestRate = 0.20;
+        let months = duration; 
+        let finalAmount = investment * Math.pow(1 + interestRate, months / 12); 
+        finalAmount = finalAmount; 
+        let resultMessage = `If you invest ${investment} for ${months} months, you will have ${finalAmount} at the end.`;
+        document.querySelector('.output').innerText = resultMessage;
+        }
+        function loan(){
+          let  loan  = document.getElementById('call').value;
+        let duration = document.getElementById('choose').value;
+        if (isNaN(loan) ||  loan  <= 0) {
+            alert("Please enter a valid loan amount.");
+            return; 
+        }
+        if (isNaN(duration) || duration <= 0) {
+            alert("Please enter a valid duration in months.");
+            return; 
+        }
+        loan = Number(loan);
+        duration = Number(duration);    
+        let interestRate = 0.50;
+        let months = duration; 
+        let finalAmount = loan +(loan/duration)
+        finalAmount = finalAmount; 
+        let resultMessage = `If you borrow ${loan} for ${months} months, you repay ${finalAmount}.`;
+        document.querySelector('.scam').innerText = resultMessage;
         }
     </script>
 
-    <code>
-      let age =65 <br>
-      function agecal (retire, dateofbirth){ <br>
-          return dateofbirth-retire <br>
-      } <br> <br>
 
-      let a = prompt('What year were you born?') <br>
-      let thisyear= new Date().getFullYear(); <br>
-      alert(`You are ${agecal(a,thisyear)} years old`); <br>
-      if(age>agecal(a,thisyear)){ <br>
-          alert(`You should retire in ${age - agecal(a,thisyear)} years`) <br>
-      }else if(age==agecal(a,thisyear)){ <br>
-          alert('You can retire now') <br>
-      }else{ <br>
-          alert(`You are too old for this job retire immediately`) <br>
-      } <br>
-    </code>
+    <div class="col-sm container" style=" background: purple;padding: 50px;text-align: center;width: fit-content;margin-top: 50px;">
+         <h3 class="text-center">LOAN CALCULATOR</h3><br>
+         <h4>How much do you wish to borrow?</h4>
+         <input type="text" placeholder="How much do you want to invest?" id="call">
+         <h6>How many months would u like to extend your loan?</h6>
+         <select id="choose">
+           <option selected value="1">Duration</option>
+           <option value="3">3 months</option>
+           <option value="6">6 months</option>
+           <option value="9">9 months</option>
+           <option value="12">12 months</option>
+           <option value="15">15 months</option>
+         </select>
+         <button style="margin-top: 10px;" onclick="loan()">Calculate your Loan amount</button>
+         <P><b>NOTE:</b> Our Loan rate is 50% interest</P>
+         <p class="scam"></p>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
