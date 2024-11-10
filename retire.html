@@ -165,14 +165,6 @@
         function cal() {
         let investment = document.getElementById('mall').value;
         let duration = document.getElementById('sel').value;
-        if (isNaN(investment) || investment <= 0) {
-            alert("Please enter a valid investment amount.");
-            return; 
-        }
-        if (isNaN(duration) || duration <= 0) {
-            alert("Please enter a valid duration in months.");
-            return; 
-        }
         investment = Number(investment);
         duration = Number(duration);    
         let interestRate = 0.20;
@@ -182,26 +174,19 @@
         let resultMessage = `If you invest ${investment} for ${months} months, you will have ${finalAmount} at the end.`;
         document.querySelector('.output').innerText = resultMessage;
         }
-        function loan(){
-          let  loan  = document.getElementById('call').value;
+        function loan() {
+        let loanAmount = document.getElementById('call').value;
         let duration = document.getElementById('choose').value;
-        if (isNaN(loan) ||  loan  <= 0) {
-            alert("Please enter a valid loan amount.");
-            return; 
-        }
-        if (isNaN(duration) || duration <= 0) {
-            alert("Please enter a valid duration in months.");
-            return; 
-        }
-        loan = Number(loan);
-        duration = Number(duration);    
-        let interestRate = 0.50;
-        let months = duration; 
-        let finalAmount = loan +(loan/duration)
-        finalAmount = finalAmount; 
-        let resultMessage = `If you borrow ${loan} for ${months} months, you repay ${finalAmount}.`;
+        loanAmount = Number(loanAmount);
+        duration = Number(duration);
+        let interestRate = 0.10;
+        let finalAmount = loanAmount * (1 + interestRate * duration);
+        finalAmount = Math.ceil(finalAmount);
+        let resultMessage = `If you borrow ${loanAmount} for ${duration} months at 10% monthly interest, you repay ${finalAmount}.`;
         document.querySelector('.scam').innerText = resultMessage;
         }
+
+
     </script>
 
 
@@ -219,7 +204,7 @@
            <option value="15">15 months</option>
          </select>
          <button style="margin-top: 10px;" onclick="loan()">Calculate your Loan amount</button>
-         <P><b>NOTE:</b> Our Loan rate is 50% interest</P>
+         <P><b>NOTE:</b> Our Loan rate is 10% interest</P>
          <p class="scam"></p>
     </div>
 
