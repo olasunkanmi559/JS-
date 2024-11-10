@@ -177,7 +177,7 @@
         duration = Number(duration);    
         let interestRate = 0.20;
         let months = duration; 
-        let finalAmount = investment * Math.pow(1 + interestRate, months / 12); 
+        let finalAmount = investment * interestRate * (duration/12) + investment;
         finalAmount = finalAmount; 
         let resultMessage = `If you invest ${investment} for ${months} months, you will have ${finalAmount} at the end.`;
         document.querySelector('.output').innerText = resultMessage;
