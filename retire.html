@@ -17,7 +17,6 @@
           outline: 2px solid yellow;
       }
       .rall{
-        margin: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -42,7 +41,7 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
                       <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
-                      <!-- <li><a class="dropdown-item" href="simplecal.html">SIMPLE CALCULATOR</a></li> -->
+                      <li><a class="dropdown-item" href="loop.html">lOOP</a></li>
                     </ul>
                   </div>
                 </ul>
@@ -50,7 +49,7 @@
         </div>
 
 <div class="rall row">
-      <div class="pen container col-sm" style="background: gold; padding: 50px;width: fit-content; text-align: center; margin-top: 50px; color: white;">
+      <div class="pen container col-sm" style="background: gold; padding: 70px; text-align: center; margin-top: 50px; color: black;">
         <h3 class="text-center">RETIREMENT CALCULATOR</h3><br>
         <input type="text" placeholder="What year were you born?" id="man">
         <button onclick="calculate()" id="moon">Calculate when to retire</button>
@@ -58,26 +57,23 @@
     </div> 
 
         
-<div style=" background: red ;padding: 50px;text-align: center;width: fit-conten;margin-top: 50px; color: white;" class="container col-sm">
+<div style=" background: red ;padding: 19px;text-align: center;width: fit-conten;margin-top: 50px; color: white;" class="container col-sm">
   <h1>SIMPLE CALCULATOR</h1>
     <input type="text" placeholder="FirstNo" id="input1"> <br> <br>
     <span class="currentsymbol"></span> <br>
-    <input type="text" placeholder="SecNo" id="input2"> <br> <br>
+    <input type="text" placeholder="SecNo" id="input2">
     <span class="outputanswer"></span> <br>
-    
     <button onclick="addition()" class="but">+</button>
     <button onclick="addit()" class="but">*</button> 
-    <button onclick="minus()" class="but">-</button> <br>
+    <button onclick="minus()" class="but">-</button>
     <button onclick="percent()" class="but">%</button> 
-    <button onclick="division()" class="but">/</button> <br>
+    <button onclick="division()" class="but">/</button>
 </div>   
   
 <!-- investment Calculator -->
-  <div class="col-sm container" style=" background: blue;padding: 50px;text-align: center;width: fit-content;margin-top: 50px; color: white;">
+  <div class="col-sm container" style=" background: blue;padding: 50px;text-align: center;margin-top: 50px; color: white;">
     <h3 class="text-center">INVESTMENT CALCULATOR</h3><br>
-    <h4>What amount is your investment?</h4>
     <input type="text" placeholder="How much do you want to invest?" id="mall">
-    <h6>How many months would you like to invest for?</h6>
     <select id="sel">
       <option selected value="1">Duration</option>
       <option value="3">3 months</option>
@@ -91,11 +87,9 @@
     <p class="output"></p>
   </div>
   
-  <div class="col-sm container" style=" background: purple;padding: 50px;text-align: center;width: fit-content;margin-top: 50px; color: white;">
+  <div class="col-sm container" style=" background: purple;;text-align: center;margin-top: 50px; color: white; padding: 50px;">
        <h3 class="text-center">LOAN CALCULATOR</h3><br>
-       <h4>How much do you wish to borrow?</h4>
        <input type="text" placeholder="How much do you want to invest?" id="call">
-       <h6>How many months would u like to extend your loan?</h6>
        <select id="choose">
          <option selected value="1">Duration</option>
          <option value="3">3 months</option>
@@ -116,15 +110,9 @@
     }
     function calculate() {
       let yearOfBirth = document.getElementById('man').value;  
-      if (isNaN(yearOfBirth) || yearOfBirth === "") {
-            alert("Please enter a valid year of birth.");
-            return;
-        }
         let currentYear = new Date().getFullYear();
         let age = ageCalc(Number(yearOfBirth), currentYear);
-
         let remainingYears = retirementAge - age;
-
         let result = '';
         if (remainingYears > 0) {
             result = `You will retire in ${remainingYears} years`;
@@ -214,7 +202,7 @@
             let totalInterest = borrowedAmount * interestRate;
             let totalRepayment = borrowedAmount + totalInterest;
             let monthlyRepayment = totalRepayment / loanDuration;
-            monthlyRepayment = monthlyRepayment.toFixed(2);
+            monthlyRepayment = monthlyRepayment;
             let resultMessage = `If you borrow ${borrowedAmount} for ${loanDuration} month(s), you will repay ${monthlyRepayment} per month.`;
             document.querySelector('.scam').innerText = resultMessage;
         }
