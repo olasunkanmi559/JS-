@@ -9,26 +9,38 @@
 </head>
 <body>
     <div style="border-top: 5px solid black; margin-top: 10px;">
-        <div class="over">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="ola.html">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="index.html">JS HISTORY</a></li>
-                  <li class="page-item"><a class="page-link" href="myself.html">ABOUTME</a></li>
-                  <li class="page-item"><a class="page-link" href="ola.html">VAR, LET, CONST</a></li>
-                  <div class="dropdown">
-                    <button class="dropdown-toggle"style="border: none; width: 100x; height: 37.5px;" type="button" data-bs-toggle="dropdown">
-                      MORE
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
-                      <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
-                      <li><a class="dropdown-item" href="loop.html">lOOP</a></li>
-                    </ul>
-                  </div>
-                </ul>
-              </nav>
-        </div>
+       
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JS ASSIGNMENT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="ola.html">LET, VAR AND CONST</a>
+          </li>
+          <div class="dropdown">
+            <button class="dropdown-toggle"style="border: none; width: 100x; height: 37.5px;" type="button" data-bs-toggle="dropdown">
+              MORE
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
+              <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
+              <li><a class="dropdown-item" href="loop.html">lOOP</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="myself.html">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <script>
         // for odd numbers
@@ -40,7 +52,7 @@
         }  
 
 
-       // Loop to find prime numbers between 10 and 50
+       // prime numbers between 10 and 50
         for (let x = 10; x < 50; x++) {
             let isPrime = true;
             for (let i = 2; i <= Math.sqrt(x); i++) {

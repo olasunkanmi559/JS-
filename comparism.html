@@ -24,107 +24,119 @@
         }
     </style>
 </head>
-<body><div style="border-top: 5px solid black; margin-top: 10px;">
-    <div class="over">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="ola.html">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="index.html">JS HISTORY</a></li>
-              <li class="page-item"><a class="page-link" href="myself.html">ABOUTME</a></li>
-              <li class="page-item"><a class="page-link" href="ola.html">VAR, LET, CONST</a></li>
-              <div class="dropdown">
-                <button class="dropdown-toggle"style="border: none; width: 100x; height: 37.5px;" type="button" data-bs-toggle="dropdown">
-                  MORE
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
-                  <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
-                  <li><a class="dropdown-item" href="loop.html">lOOP</a></li>
-                </ul>
-              </div>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">JS ASSIGNMENT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="ola.html">LET, VAR AND CONST</a>
+          </li>
+          <div class="dropdown">
+            <button class="dropdown-toggle"style="border: none; width: 100x; height: 37.5px;" type="button" data-bs-toggle="dropdown">
+              MORE
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
+              <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
+              <li><a class="dropdown-item" href="loop.html">lOOP</a></li>
             </ul>
-          </nav>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="myself.html">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
     
-    <h1 style="text-align: center; background: yellow; padding: 50px;">
-       LOGICAL OPERATORS VS COMPARISON OPERATORS
-    </h1> <br><br><br>
-
-    <h2>
-        Logical Operators:
-    </h2><br>
-
-    <p>
-        <strong>Purpose:</strong> Combine or manipulate Boolean values (true/false).
-    </p> <br>
-    <ul>
-        <strong>Common Operators:</strong>
-        <li><strong>AND (&&):</strong> True if both operands are true.</li>
-        <li><strong>OR (||): </strong> True if at least one operand is true.</li>
-        <li><strong>NOT (!):</strong> Reverses the Boolean value.</li>
-    </ul>
-    <ul>
-        <li>Comparison operators are used for evaluating relationships between values.</li>
-        <li> Logical operators are used to combine the results of comparison operations.</li>
-    </ul>
-    <h3>
-        EXAMPLE
-    </h3>
-    <P>
-        You might see both types of operators in a conditional statement:
-    </P>
-    <p class="code">
-        if (age >= 18) && (citizen == true):
-        print("Eligible to vote.")
-    </p>
-    <p class="code">
-        int x = 5;
-        int y = 10;
-        Console.WriteLine(x > 10 || y < 15);  // True
-    </p>
-    <p class="code">
-        int x = 5;
-        int y = 10;
-        System.out.println(x > 0 && y < 15);  // True
-    </p>
-    <p>
-        Understanding how to use both types of operators is crucial for constructing conditions in programming and logical reasoning in mathematics.
-    </p> <br><br><br><br>
-
-    <h2>
-        COMPARISON OPERATORS
-    </h2>
-    <p>
-        These operators compare two values and return a Boolean result (true or false). Common comparison operators include:
-    </p>
-    <ul>
-        <li><strong>Equal to (==):</strong> Checks if two values are equal.</li>
-        <li><strong>Not equal to (!=):</strong> Checks if two values are not equal.</li>
-        <li><strong>Greater than (>):</strong> Checks if the left value is greater than the right value.</li>
-        <li><strong>Less than (<):</strong> Checks if the left value is less than the right value.</li>
-        <li><strong>Greater than or equal to (>=):</strong> Checks if the left value is greater than or equal to the right value.</li>
-        <li><strong>Less than or equal to (<=):</strong> Checks if the left value is less than or equal to the right value.</li>
-    </ul><br><br><br>
-
-    <p class="code">
-        x = 5
-        print(x == 5)  # True
-    </p>
-    <p class="code">
-        x = 5
-        print(x != 3)  # True  
-    </p>
-    <p class="code">
-        int x = 5;
-        System.out.println(x > 3);  // True 
-    </p>
-    <ul>
-        <h3>SUMMARY</h3>
-        <li><strong>Comparison operators</strong> are used to compare values, producing true or false based on those comparisons.</li>
-        <li><strong>Logical operators</strong>are used to combine multiple Boolean expressions, also producing true or false based on the combination.</li>
-    </ul>
-
+    <div class="body">
+        <h1 style="text-align: center; background: yellow; padding: 50px;">
+            LOGICAL OPERATORS VS COMPARISON OPERATORS
+         </h1> <br><br><br>
+     
+         <h2>
+             Logical Operators:
+         </h2><br>
+     
+         <p>
+             <strong>Purpose:</strong> Combine or manipulate Boolean values (true/false).
+         </p> <br>
+         <ul>
+             <strong>Common Operators:</strong>
+             <li><strong>AND (&&):</strong> True if both operands are true.</li>
+             <li><strong>OR (||): </strong> True if at least one operand is true.</li>
+             <li><strong>NOT (!):</strong> Reverses the Boolean value.</li>
+         </ul>
+         <ul>
+             <li>Comparison operators are used for evaluating relationships between values.</li>
+             <li> Logical operators are used to combine the results of comparison operations.</li>
+         </ul>
+         <h3>
+             EXAMPLE
+         </h3>
+         <P>
+             You might see both types of operators in a conditional statement:
+         </P>
+         <p class="code">
+             if (age >= 18) && (citizen == true):
+             print("Eligible to vote.")
+         </p>
+         <p class="code">
+             int x = 5;
+             int y = 10;
+             Console.WriteLine(x > 10 || y < 15);  // True
+         </p>
+         <p class="code">
+             int x = 5;
+             int y = 10;
+             System.out.println(x > 0 && y < 15);  // True
+         </p>
+         <p>
+             Understanding how to use both types of operators is crucial for constructing conditions in programming and logical reasoning in mathematics.
+         </p> <br><br><br><br>
+     
+         <h2>
+             COMPARISON OPERATORS
+         </h2>
+         <p>
+             These operators compare two values and return a Boolean result (true or false). Common comparison operators include:
+         </p>
+         <ul>
+             <li><strong>Equal to (==):</strong> Checks if two values are equal.</li>
+             <li><strong>Not equal to (!=):</strong> Checks if two values are not equal.</li>
+             <li><strong>Greater than (>):</strong> Checks if the left value is greater than the right value.</li>
+             <li><strong>Less than (<):</strong> Checks if the left value is less than the right value.</li>
+             <li><strong>Greater than or equal to (>=):</strong> Checks if the left value is greater than or equal to the right value.</li>
+             <li><strong>Less than or equal to (<=):</strong> Checks if the left value is less than or equal to the right value.</li>
+         </ul><br><br><br>
+     
+         <p class="code">
+             x = 5
+             print(x == 5)  # True
+         </p>
+         <p class="code">
+             x = 5
+             print(x != 3)  # True  
+         </p>
+         <p class="code">
+             int x = 5;
+             System.out.println(x > 3);  // True 
+         </p>
+         <ul>
+             <h3>SUMMARY</h3>
+             <li><strong>Comparison operators</strong> are used to compare values, producing true or false based on those comparisons.</li>
+             <li><strong>Logical operators</strong>are used to combine multiple Boolean expressions, also producing true or false based on the combination.</li>
+         </ul>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
