@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <style>
-      code{
-          padding: 50px;
-          margin-top: 100px;
-          text-align: center;
-          width: fit-content;
-      }
-      .inp{
-          outline: 2px solid yellow;
-      }
-      .l{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 100px;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    code {
+      padding: 50px;
+      margin-top: 100px;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .inp {
+      outline: 2px solid yellow;
+    }
+
+    .l {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 100px;
+    }
+  </style>
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">JS ASSIGNMENT</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
@@ -39,7 +44,8 @@
             <a class="nav-link active" aria-current="page" href="ola.html">LET, VAR AND CONST</a>
           </li>
           <div class="dropdown">
-            <button class="dropdown-toggle"style="border: none; width: 100x; height: 37.5px;" type="button" data-bs-toggle="dropdown">
+            <button class="dropdown-toggle" style="border: none; width: 100x; height: 37.5px;" type="button"
+              data-bs-toggle="dropdown">
               MORE
             </button>
             <ul class="dropdown-menu">
@@ -59,170 +65,201 @@
     </div>
   </nav>
 
-     <div class="l">
-      <div class="rall row">
-        <div class="pen container col-sm" style="background: gold; padding: 50px; text-align: center; color: black;">
-          <h3 class="text-center">RETIREMENT CALCULATOR</h3><br>
-          <input type="text" placeholder="What year were you born?" id="man">
-          <button onclick="calculate()" id="moon">Calculate when to retire</button>
-          <b><p class="answer"></p></b>
-      </div> 
-  
-          
-  <div style=" background: red ;padding: 50px;text-align: center; color: white;" class="container col-sm">
-    <h1>SIMPLE CALCULATOR</h1>
-      <input type="text" placeholder="FirstNo" id="input1"> <br> 
-      <span class="currentsymbol"></span> <br>
-      <input type="text" placeholder="SecNo" id="input2">
-      <span class="outputanswer"></span> <br>
-      <button onclick="addition()" class="but">+</button>
-      <button onclick="addit()" class="but">*</button> 
-      <button onclick="minus()" class="but">-</button>
-      <button onclick="percent()" class="but">%</button> 
-      <button onclick="division()" class="but">/</button>
-  </div>   
-    
-  <!-- investment Calculator -->
-    <div class="col-sm container" style=" background: blue;padding: 50px;text-align: center; color: white;">
-      <h3 class="text-center">INVESTMENT CALCULATOR</h3><br>
-      <input type="text" placeholder="How much do you want to invest?" id="mall">
-      <select id="sel">
-        <option selected value="1">Duration</option>
-        <option value="3">3 months</option>
-        <option value="6">6 months</option>
-        <option value="9">9 months</option>
-        <option value="12">12 months</option>
-        <option value="15">15 months</option>
-      </select>
-      <P><b>NOTE:</b> Our investment rate is 20% interest</P>
-      <button style="margin-top: 10px;" onclick="cal()">Calculate your investment</button>
-      <p class="output"></p>
+  <div class="l">
+    <div class="rall row">
+      <div class="pen container col-sm" style="background: gold; padding: 50px; text-align: center; color: black;">
+        <h3 class="text-center">RETIREMENT CALCULATOR</h3><br>
+        <input type="text" placeholder="What year were you born?" id="man">
+        <button onclick="calculate()" id="moon">Calculate when to retire</button>
+        <b>
+          <p class="answer"></p>
+        </b>
+      </div>
+
+
+
+      <!-- investment Calculator -->
+      <div class="col-sm container" style=" background: blue;padding: 50px;text-align: center; color: white;">
+        <h3 class="text-center">INVESTMENT CALCULATOR</h3><br>
+        <input type="text" placeholder="How much do you want to invest?" id="mall">
+        <select id="sel">
+          <option selected value="1">Duration</option>
+          <option value="3">3 months</option>
+          <option value="6">6 months</option>
+          <option value="9">9 months</option>
+          <option value="12">12 months</option>
+          <option value="15">15 months</option>
+        </select>
+        <P><b>NOTE:</b> Our investment rate is 20% interest</P>
+        <button style="margin-top: 10px;" onclick="cal()">Calculate your investment</button>
+        <p class="output"></p>
+      </div>
+
+      <div class="col-sm container" style=" background: purple;;text-align: center; color: white; padding: 50px;">
+        <h3 class="text-center">LOAN CALCULATOR</h3><br>
+        <input type="text" placeholder="How much do you want to invest?" id="call">
+        <select id="choose">
+          <option selected value="1">Duration</option>
+          <option value="3">3 months</option>
+          <option value="6">6 months</option>
+          <option value="9">9 months</option>
+          <option value="12">12 months</option>
+          <option value="15">15 months</option>
+        </select>
+        <P><b>NOTE:</b> Our Loan rate is 20% interest</P>
+        <button style="margin-top: 10px;" onclick="loan()">Calculate your Loan amount</button>
+        <p class="scam"></p>
+      </div>
+      <div style=" background: red ;padding: 50px;text-align: center; color: white;" class="container col-sm">
+        <h1>SIMPLE CALCULATOR</h1>
+        <input type="text" placeholder="FirstNo" id="input1"> <br>
+        <span class="currentsymbol"></span> <br>
+        <input type="text" placeholder="SecNo" id="input2">
+        <span class="outputanswer"></span> <br>
+        <button class="but" value="add">+</button>
+        <button class="but" value="times">*</button>
+        <button class="but" value="min">-</button>
+        <button class="but" value="mod">%</button>
+        <button class="but" value="divi">/</button>
+      </div>
     </div>
-    
-    <div class="col-sm container" style=" background: purple;;text-align: center; color: white; padding: 50px;">
-         <h3 class="text-center">LOAN CALCULATOR</h3><br>
-         <input type="text" placeholder="How much do you want to invest?" id="call">
-         <select id="choose">
-           <option selected value="1">Duration</option>
-           <option value="3">3 months</option>
-           <option value="6">6 months</option>
-           <option value="9">9 months</option>
-           <option value="12">12 months</option>
-           <option value="15">15 months</option>
-         </select>
-         <P><b>NOTE:</b> Our Loan rate is 20% interest</P>
-         <button style="margin-top: 10px;" onclick="loan()">Calculate your Loan amount</button>
-         <p class="scam"></p>
-    </div>
-     </div>
-  <script>
-    let retirementAge = 65;
-    let ageCalc = (yearOfBirth, currentYear) => {
-        return currentYear - yearOfBirth;
-    }
-    function calculate() {
-    const yearOfBirth = Number(document.getElementById('man').value);
-    const currentYear = new Date().getFullYear();
-    const age = ageCalc(yearOfBirth, currentYear);
-    const retirementAge = 65;
-    const remainingYears = retirementAge - age;
-    let result = '';
+    <script>
+      let myactbut = document.querySelectorAll('.but');
 
-    if (remainingYears > 0) {
-        result = `You will retire in ${remainingYears} years`;
-    } else if (remainingYears === 0) {
-        result = 'You can retire this year!';
-    } else if (remainingYears === -1) {
-        result = 'You should have retired a year ago';
-    } else {
-        result = `You should have retired ${Math.abs(remainingYears)} years ago`;
-    }
 
-    document.querySelector('.answer').innerText = result;
-}
-
-    function addition(){
-            let firstinp = document.querySelector('#input1').value;
-            firstinp=Number(firstinp);
-            let symbol = document.querySelector('.currentsymbol');
-            let Secinp = document.querySelector('#input2').value;
-            Secinp=Number(Secinp);
-            let mysign = document.querySelector('.outputanswer');
-
+      for (let i = 0; i < myactbut.length; i++) {
+        myactbut[i].addEventListener('click', () => {
+          let firstinp = +(document.querySelector('#input1').value);
+          let symbol = document.querySelector('.currentsymbol');
+          let Secinp = +(document.querySelector('#input2').value);
+          let mysign = document.querySelector('.outputanswer');
+      
+          if(myactbut[i].value=="add"){
             mysign.innerHTML= `=${firstinp+Secinp}`;
             symbol.innerHTML= `+`
-        }  
-        function addit(){
-            let firstinp = document.querySelector('#input1').value;
-            firstinp=Number(firstinp);
-            let symbol = document.querySelector('.currentsymbol');
-            let Secinp = document.querySelector('#input2').value;
-            Secinp=Number(Secinp);
-            let mysign = document.querySelector('.outputanswer');
-
+          } else if(myactbut[i].value=="times"){
             mysign.innerHTML= `=${firstinp*Secinp}`;
             symbol.innerHTML= `*`
-        }  
-        function minus(){
-            let firstinp = document.querySelector('#input1').value;
-            firstinp=Number(firstinp);
-            let symbol = document.querySelector('.currentsymbol');
-            let Secinp = document.querySelector('#input2').value;
-            Secinp=Number(Secinp);
-            let mysign = document.querySelector('.outputanswer');
-
+          } if(myactbut[i].value=="min"){
             mysign.innerHTML= `=${firstinp-Secinp}`;
             symbol.innerHTML= `-`
-        }
-        function percent(){
-            let firstinp = document.querySelector('#input1').value;
-            firstinp=Number(firstinp);
-            let symbol = document.querySelector('.currentsymbol');
-            let Secinp = document.querySelector('#input2').value;
-            Secinp=Number(Secinp);
-            let mysign = document.querySelector('.outputanswer');
-
+          } else if(myactbut[i].value=="mod"){
             mysign.innerHTML= `=${firstinp%Secinp}`;
             symbol.innerHTML= `%`
-        }
-
-        function division(){
-            let firstinp = document.querySelector('#input1').value;
-            firstinp=Number(firstinp);
-            let symbol = document.querySelector('.currentsymbol');
-            let Secinp = document.querySelector('#input2').value;
-            Secinp=Number(Secinp);
-            let mysign = document.querySelector('.outputanswer');
-
+          } if(myactbut[i].value=="divi"){
             mysign.innerHTML= `=${firstinp/Secinp}`;
             symbol.innerHTML= `/`
+          }
+        })
+        
+
+      }
+      let retirementAge = 65;
+      let ageCalc = (yearOfBirth, currentYear) => {
+        return currentYear - yearOfBirth;
+      }
+      function calculate() {
+        const yearOfBirth = Number(document.getElementById('man').value);
+        const currentYear = new Date().getFullYear();
+        const age = ageCalc(yearOfBirth, currentYear);
+        const retirementAge = 65;
+        const remainingYears = retirementAge - age;
+        let result = '';
+
+        if (remainingYears > 0) {
+          result = `You will retire in ${remainingYears} years`;
+        } else if (remainingYears === 0) {
+          result = 'You can retire this year!';
+        } else if (remainingYears === -1) {
+          result = 'You should have retired a year ago';
+        } else {
+          result = `You should have retired ${Math.abs(remainingYears)} years ago`;
         }
 
-        function cal() {
-            let investment = document.getElementById('mall').value;
-            let duration = document.getElementById('sel').value;
-            investment = Number(investment);
-            duration = Number(duration);    
-            let interestRate = 0.20;
-            let months = duration; 
-            let finalAmount = 0.2 * (investment * duration) + investment;
-            finalAmount = finalAmount; 
-            let resultMessage = `If you invest ${investment} for ${months} months, you will have ${finalAmount} at the end.`;
-            document.querySelector('.output').innerText = resultMessage;
-        }
-        function loan() {
-            let borrowedAmount = Number(document.getElementById('call').value);
-            let loanDuration = Number(document.getElementById('choose').value);
-                    
-            let interestRate = 0.2;
-            let totalInterest = borrowedAmount * interestRate;
-            let totalRepayment = borrowedAmount + totalInterest;
-            let monthlyRepayment = totalRepayment / loanDuration;
-            let adjustedMonthlyRepayment = monthlyRepayment - (interestRate * monthlyRepayment);
-                    
-            let resultMessage = `If you borrow ${borrowedAmount} for ${loanDuration} month(s), you will repay ${adjustedMonthlyRepayment.toFixed(2)} per month.`;
-            document.querySelector('.scam').innerText = resultMessage;
-        }
+        document.querySelector('.answer').innerText = result;
+      }
+
+      // function addition(){
+      //         let firstinp = document.querySelector('#input1').value;
+      //         firstinp=Number(firstinp);
+      //         let symbol = document.querySelector('.currentsymbol');
+      //         let Secinp = document.querySelector('#input2').value;
+      //         Secinp=Number(Secinp);
+      //         let mysign = document.querySelector('.outputanswer');
+
+      //         mysign.innerHTML= `=${firstinp+Secinp}`;
+      //         symbol.innerHTML= `+`
+      //     }  
+      //     function addit(){
+      //         let firstinp = document.querySelector('#input1').value;
+      //         firstinp=Number(firstinp);
+      //         let symbol = document.querySelector('.currentsymbol');
+      //         let Secinp = document.querySelector('#input2').value;
+      //         Secinp=Number(Secinp);
+      //         let mysign = document.querySelector('.outputanswer');
+
+      //         mysign.innerHTML= `=${firstinp*Secinp}`;
+      //         symbol.innerHTML= `*`
+      //     }  
+      //     function minus(){
+      //         let firstinp = document.querySelector('#input1').value;
+      //         firstinp=Number(firstinp);
+      //         let symbol = document.querySelector('.currentsymbol');
+      //         let Secinp = document.querySelector('#input2').value;
+      //         Secinp=Number(Secinp);
+      //         let mysign = document.querySelector('.outputanswer');
+
+      //         mysign.innerHTML= `=${firstinp-Secinp}`;
+      //         symbol.innerHTML= `-`
+      //     }
+      //     function percent(){
+      //         let firstinp = document.querySelector('#input1').value;
+      //         firstinp=Number(firstinp);
+      //         let symbol = document.querySelector('.currentsymbol');
+      //         let Secinp = document.querySelector('#input2').value;
+      //         Secinp=Number(Secinp);
+      //         let mysign = document.querySelector('.outputanswer');
+
+      //         mysign.innerHTML= `=${firstinp%Secinp}`;
+      //         symbol.innerHTML= `%`
+      //     }
+
+      //     function division(){
+      //         let firstinp = document.querySelector('#input1').value;
+      //         firstinp=Number(firstinp);
+      //         let symbol = document.querySelector('.currentsymbol');
+      //         let Secinp = document.querySelector('#input2').value;
+      //         Secinp=Number(Secinp);
+      //         let mysign = document.querySelector('.outputanswer');
+
+      //         mysign.innerHTML= `=${firstinp/Secinp}`;
+      //         symbol.innerHTML= `/`
+      //     }
+
+      function cal() {
+        let investment = document.getElementById('mall').value;
+        let duration = document.getElementById('sel').value;
+        investment = Number(investment);
+        duration = Number(duration);
+        let interestRate = 0.20;
+        let months = duration;
+        let finalAmount = 0.2 * (investment * duration) + investment;
+        finalAmount = finalAmount;
+        let resultMessage = `If you invest ${investment} for ${months} months, you will have ${finalAmount} at the end.`;
+        document.querySelector('.output').innerText = resultMessage;
+      }
+      function loan() {
+        let borrowedAmount = Number(document.getElementById('call').value);
+        let loanDuration = Number(document.getElementById('choose').value);
+        let interestRate = 0.2;
+        let totalInterest = borrowedAmount * interestRate;
+        let totalRepayment = borrowedAmount + totalInterest;
+        let monthlyRepayment = totalRepayment / loanDuration;
+        let adjustedMonthlyRepayment = monthlyRepayment - (interestRate * monthlyRepayment);
+
+        let resultMessage = `If you borrow ${borrowedAmount} for ${loanDuration} month(s), you will repay ${adjustedMonthlyRepayment.toFixed(2)} per month.`;
+        document.querySelector('.scam').innerText = resultMessage;
+      }
 
 
 
@@ -234,4 +271,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
