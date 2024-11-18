@@ -73,19 +73,20 @@
 
 
        // prime numbers between 10 and 50
-        for (let x = 10; x < 50; x++) {
-            let isPrime = true;
-            for (let i = 2; i <= Math.sqrt(x); i++) {
-                if (x % i === 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime && x > 1) {
-                console.log(x);
-            }
-        }
-
+        function isPrime(num) {
+          if (num <= 1) return false;
+          for (let i = 2; i <= Math.sqrt(num); i++) {
+              if (num % i === 0) {
+                  return false;
+              }
+          }
+          return true;
+      }
+      for (let x = 10; x < 50; x++) {
+          if (isPrime(x)) {
+              console.log(x);
+          }
+      }
   
 
 
@@ -97,29 +98,29 @@
 <div class="container code">
   <code>
     // for odd numbers
-     <br>
-    for (let x = 20; x < 70; x++) { <br>
-    if (x % 2 === 0) {  <br>
-        continue;
-    } 
-    console.log(x);
-    }  <br> <br> <br>
-  
-  
-   // prime numbers between 10 and 50 
-   <br>
-    for (let x = 10; x < 50; x++) { <br>
-        let isPrime = true; <br>
-        for (let i = 2; i <= Math.sqrt(x); i++) { <br>
-            if (x % i === 0) {  <br>
-                isPrime = false; <br>
-                break; <br>
-            } 
-          }
-        if (isPrime && x > 1) { <br>
-            console.log(x);<br>
+        for (let x = 20; x < 70; x++) { <br>
+        if (x % 2 === 0) { <br>
+            continue;  <br>
         }
-    }
+        console.log(x);  <br>
+        }  
+
+
+       // prime numbers between 10 and 50
+        function isPrime(num) { <br>
+          if (num <= 1) return false; <br>
+          for (let i = 2; i <= Math.sqrt(num); i++) { <br>
+              if (num % i === 0) { <br>
+                  return false; <br>
+              }
+          }
+          return true; <br>
+      }
+      for (let x = 10; x < 50; x++) { <br>
+          if (isPrime(x)) { <br>
+              console.log(x); <br>
+          }
+      }
   
   </code>
 </div>
