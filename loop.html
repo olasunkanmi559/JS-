@@ -64,29 +64,32 @@
 
     <script>
         // for odd numbers
-        for (let x = 20; x < 70; x++) {
-        if (x % 2 === 0) { 
+        for (let x = 20; x < 70; x++){
+        if (x % 2 === 0){ 
             continue;  
         }
         console.log(x);  
         }  
 
+      // for prime numbers
+       let i;
+       let n = prompt('Input a prime number between 50-200')
+       if (n<=1.9){
+        alert('Invalid Number')
+       } else if(n == 2){
+        alert(`${n} is a prime number`)
+       } else{
+        for (i=2; i<n; i++)
+          if (n % i == 0){
+            alert(`${n} is not a prime number`)
+            break;
+          }
+       }
+       if(n==i){
+        alert(`${n} is a prime number`)
+       }
 
-       // prime numbers between 10 and 50
-        function isPrime(num) {
-          if (num <= 1) return false;
-          for (let i = 2; i <= Math.sqrt(num); i++) {
-              if (num % i === 0) {
-                  return false;
-              }
-          }
-          return true;
-      }
-      for (let x = 10; x < 50; x++) {
-          if (isPrime(x)) {
-              console.log(x);
-          }
-      }
+    
   
 
 
@@ -97,30 +100,35 @@
 
 <div class="container code">
   <code>
-    // for odd numbers
-        for (let x = 20; x < 70; x++) { <br>
-        if (x % 2 === 0) { <br>
-            continue;  <br>
-        }
-        console.log(x);  <br>
-        }  
+    // for odd numbers <br>
+    for (let x = 20; x < 70; x++){ <br>
+    if (x % 2 === 0){  <br>
+        continue;   <br>
+    }
+    console.log(x);  <br>
+    }  
+ <br>
+  // for prime numbers <br>
+   let i; <br>
+   let n = prompt('Input a prime number between 50-200')<br>
+   if (n<=1.9){ <br>
+    alert('Invalid Number') <br>
+   } else if(n == 2){ <br>
+    alert(`${n} is a prime number`) <br>
+   } else{ <br>
+    for (i=2; i<n; i++) <br>
+      if (n % i == 0){ <br>
+        alert(`${n} is not a prime number`) <br>
+        break; <br>
+      } <br>
+   } 
+   if(n==i){ <br>
+    alert(`${n} is a prime number`)
+   }
 
 
-       // prime numbers between 10 and 50
-        function isPrime(num) { <br>
-          if (num <= 1) return false; <br>
-          for (let i = 2; i <= Math.sqrt(num); i++) { <br>
-              if (num % i === 0) { <br>
-                  return false; <br>
-              }
-          }
-          return true; <br>
-      }
-      for (let x = 10; x < 50; x++) { <br>
-          if (isPrime(x)) { <br>
-              console.log(x); <br>
-          }
-      }
+
+      
   
   </code>
 </div>
