@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .code{
+            background: black;
+            /* color: white;  */
+            padding: 50px;
+            text-align: center;
+            width: fit-content;
+        }
+        .header {
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">JS ASSIGNMENT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ola.html">LET, VAR AND CONST</a>
+              </li>
+              <div class="dropdown">
+                <button class="dropdown-toggle"style="border: none; width: 100x; height: 37.5px;" type="button" data-bs-toggle="dropdown">
+                  MORE
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="comparism.html">COMPARISM</a></li>
+                  <li><a class="dropdown-item" href="retire.html">CALCULATORS</a></li>
+                  <li><a class="dropdown-item" href="loop.html">lOOP</a></li>
+                  <li><a class="dropdown-item" href="guess.html">GUESS MY NUMBER GAME</a></li>
+                </ul>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="myself.html">ABOUT ME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="new.html">METHODS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <h1 style="text-align: center;">
+        METHODS AND PROPERTIES IN JAVASCRIPT
+    </h1>  <br> <br>    
+    <h3 style="text-decoration: underline; text-align: center;">
+        STRING METHOD:
+    </h3>   
+    <h4>
+        1. Basic String Manipulation
+    </h4> 
+    <ul>
+        <li>length: Returns the length of the string.</li>
+        <div class="code">
+            <code>
+                let str = "Hello"; <br>
+                console.log(str.length); // Output: 5
+            </code>
+        </div>
+        <li>toUpperCase() / toLowerCase(): Converts the string to upper or lower case.</li>
+       <div class="code">
+        <code>
+            let str = "Hello"; <br>
+            console.log(str.length); // Output: 5
+        </code>
+       </div>
+        <li>trim(): Removes whitespace from both ends of the string.</li>
+       <div class="code">
+        <code>
+            let str = "  Hello  "; <br>
+            console.log(str.trim()); // Output: "Hello"
+        </code>
+       </div>
+    </ul>
+    <h4>
+        2. Searching and Substrings
+    </h4>
+    <ul>
+        <li>indexOf(): Finds the first occurrence of a substring.</li>
+        <div class="code">
+            <code>
+                let str = "Hello World"; <br>
+                console.log(str.indexOf("World")); // Output: 6
+            </code>
+        </div>
+        <li>lastIndexOf(): Finds the last occurrence of a substring.</li>
+        <div class="code">
+            <code>
+                let str = "Hello World World"; <br>
+                console.log(str.lastIndexOf("World")); // Output: 12
+            </code>
+        </div>
+        <li>includes(): Checks if a string contains a substring (returns true or false).</li>
+        <div class="code">
+            <code>
+                let str = "Hello World"; <br>
+                console.log(str.includes("World")); // Output: true
+            </code>
+        </div>
+    </ul>
+
+
+    <h3 style="text-decoration: underline; text-align: center;">
+        ARRAY METHOD:
+    </h3>   
+    <h4>
+        1. Adding and Removing Elements
+    </h4>
+    <ul>
+        <li>push(element): Adds one or more elements to the end of an array.</li>
+        <div class="code">
+            <code>
+                let arr = [1, 2];<br>
+                arr.push(3); <br>
+                console.log(arr); // Output: [1, 2, 3]
+            </code>
+        </div>
+        <li>pop(): Removes the last element and returns it.</li>
+        <div class="code">
+            <code>
+                let arr = [1, 2, 3];<br>
+                arr.pop(); <br>
+                console.log(arr); // Output: [1, 2]
+            </code>
+        </div>
+        <li>unshift(element): Adds one or more elements to the beginning of an array.</li>
+        <div class="code">
+            <code>
+                let arr = [2, 3]; <br>
+                arr.unshift(1); <br>
+                console.log(arr); // Output: [1, 2, 3]
+            </code>
+        </div>
+    </ul>
+    <h3>
+        2. Iterating Over Arrays
+    </h3>
+    <ul>
+        <li>forEach(callback): Executes a function for each element.</li>
+    </ul>
+    <div class="code">
+        <code>
+            let arr = [1, 2, 3]; <br>
+            arr.forEach((num) => console.log(num * 2)); // Output: 2, 4, 6
+        </code>
+    </div>
+    <h3 style="text-decoration: underline; text-align: center;">
+        DATE METHOD
+    </h3>
+    <h4>
+        1. Creating a Date Object
+    </h4>
+    <ul>
+        <li>new Date(): Creates a new Date object with the current date and time.</li>
+        <div class="code"><code>
+            let now = new Date(); <br>
+            console.log(now); // Current date and time
+        </code></div>
+        <li>new Date(timestamp): Creates a date from a UNIX timestamp (milliseconds since 1 Jan 1970)</li>
+        <div class="code"><code>
+            let date = new Date(1672531200000);
+            console.log(date); // Output: Date based on timestamp
+
+        </code></div>
+        <li>new Date(dateString): Parses a date string.</li>
+        <div class="code"><code>
+            let date = new Date("2024-11-25T10:30:00");
+            console.log(date);
+
+        </code></div>
+    </ul>
+    <h4>
+        2. Getting Date and Time
+    </h4>
+    <ul>
+        <li>getFullYear(): Returns the 4-digit year.</li>
+        <div class="code"><code>
+            let date = new Date();
+            console.log(date.getFullYear()); // Output: 2024
+        </code></div>
+        <li>getMonth(): Returns the month (0–11, where 0 = January)</li>
+        <div class="code"><code>
+            console.log(date.getMonth()); // Output: 10 (November)
+        </code></div>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
