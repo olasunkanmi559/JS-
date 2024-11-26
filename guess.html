@@ -115,17 +115,16 @@
     } else if (mynum === secretNumber){
       a.innerHTML ='Correct!';
       p.style.background = 'green';  
-      a.style.color = 'black';          
+      a.style.color = 'black';
     }
     
+  }
     let finalshow =document.querySelector('.number');
-    let placeagainbtn =document.querySelector('playagain');
+    let placeagainbtn =document.querySelector('.playagain');
     let mybutton= document.querySelector('.mybtn');
     let buttons = document.querySelector('.mybton');
-    let score = 20;
     let mybut = Number(document.getElementById('score')).value;
     let no = document.querySelector('.number');
-  }
   function checkscore(){
     score = score-4;
     if(score<=0){
@@ -137,7 +136,7 @@
         }
       }
     function playagain(){
-
+      
     }
 
 
