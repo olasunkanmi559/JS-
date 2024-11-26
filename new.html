@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
-        .code{
-            background: black;
-            /* color: white;  */
-            padding: 50px;
-            text-align: center;
-            width: fit-content;
-        }
         .header {
             align-items: center;
             justify-content: space-between;
@@ -23,6 +16,25 @@
             top: 0;
             z-index: 1000;
         }
+        .code{
+            background: black;
+            padding: 50px;
+            text-align: center;
+            width: fit-content;
+        }
+
+        button.remove {
+            display: none;
+            padding: 5px 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .code:hover button.remove {
+            display: inline-block; 
+        }
+
     </style>
 </head>
 <body>
@@ -80,13 +92,15 @@
                 console.log(str.length); // Output: 5
             </code>
         </div>
+        <button class="remove">REMOVE</button>
         <li>toUpperCase() / toLowerCase(): Converts the string to upper or lower case.</li>
        <div class="code">
         <code>
             let str = "Hello"; <br>
             console.log(str.length); // Output: 5
         </code>
-       </div>
+    </div>
+    <button class="remove">REMOVE</button>
         <li>trim(): Removes whitespace from both ends of the string.</li>
        <div class="code">
         <code>
@@ -94,6 +108,7 @@
             console.log(str.trim()); // Output: "Hello"
         </code>
        </div>
+       <button class="remove">REMOVE</button>
     </ul>
     <h4>
         2. Searching and Substrings
@@ -106,6 +121,7 @@
                 console.log(str.indexOf("World")); // Output: 6
             </code>
         </div>
+        <button class="remove">REMOVE</button>
         <li>lastIndexOf(): Finds the last occurrence of a substring.</li>
         <div class="code">
             <code>
@@ -113,6 +129,7 @@
                 console.log(str.lastIndexOf("World")); // Output: 12
             </code>
         </div>
+        <button class="remove">REMOVE</button>
         <li>includes(): Checks if a string contains a substring (returns true or false).</li>
         <div class="code">
             <code>
@@ -120,6 +137,7 @@
                 console.log(str.includes("World")); // Output: true
             </code>
         </div>
+        <button class="remove">REMOVE</button>
     </ul>
 
 
@@ -138,6 +156,7 @@
                 console.log(arr); // Output: [1, 2, 3]
             </code>
         </div>
+        <button class="remove">REMOVE</button>
         <li>pop(): Removes the last element and returns it.</li>
         <div class="code">
             <code>
@@ -146,6 +165,7 @@
                 console.log(arr); // Output: [1, 2]
             </code>
         </div>
+        <button class="remove">REMOVE</button>
         <li>unshift(element): Adds one or more elements to the beginning of an array.</li>
         <div class="code">
             <code>
@@ -154,6 +174,7 @@
                 console.log(arr); // Output: [1, 2, 3]
             </code>
         </div>
+        <button class="remove">REMOVE</button>
     </ul>
     <h3>
         2. Iterating Over Arrays
@@ -167,46 +188,105 @@
             arr.forEach((num) => console.log(num * 2)); // Output: 2, 4, 6
         </code>
     </div>
+    <button class="remove">REMOVE</button>
     <h3 style="text-decoration: underline; text-align: center;">
-        DATE METHOD
+        MATH METHOD:
+   </h3>
+   <h4>
+    1. Random Numbers
+   </h4>
+   <ul>
+    <li>Generate a random decimal between 0 (inclusive) and 1 (exclusive):</li>
+    <div class="code"><code>
+        let randomNum = Math.random(); <br>
+        console.log(randomNum); // Example: 0.572345
+    </code></div>
+    <li>Generate a random number in a range (e.g., 1 to 100):</li>
+    <div class="code"><code>
+        let min = 1; <br>
+        let max = 100; <br>
+        let randomInRange = Math.floor(Math.random() * (max - min + 1)) + min; <br>
+        console.log(randomInRange); // Example: 42
+    </code></div>
+    <button class="remove">REMOVE</button>
+   </ul>
+    <h3 style="text-decoration: underline; text-align: center;">
+        OBJECT METHOD:
     </h3>
     <h4>
-        1. Creating a Date Object
+        1. Adding Methods to an Object
     </h4>
     <ul>
-        <li>new Date(): Creates a new Date object with the current date and time.</li>
-        <div class="code"><code>
-            let now = new Date(); <br>
-            console.log(now); // Current date and time
-        </code></div>
-        <li>new Date(timestamp): Creates a date from a UNIX timestamp (milliseconds since 1 Jan 1970)</li>
-        <div class="code"><code>
-            let date = new Date(1672531200000);
-            console.log(date); // Output: Date based on timestamp
-
-        </code></div>
-        <li>new Date(dateString): Parses a date string.</li>
-        <div class="code"><code>
-            let date = new Date("2024-11-25T10:30:00");
-            console.log(date);
-
-        </code></div>
+        <li>You can define a method as a property of an object:</li>
+        <div class="code">
+            <code>
+            let person = { <br>
+                firstName: "John", <br>
+                lastName: "Doe", <br>
+                fullName: function() { <br>
+                  return this.firstName + " " + this.lastName; <br>
+                } <br>
+              }; <br>
+              <br>
+              console.log(person.fullName()); // "John Doe"        
+            </code>
+        </div>
+        <button class="remove">REMOVE</button>
     </ul>
     <h4>
-        2. Getting Date and Time
+        2. Shorthand Syntax
     </h4>
     <ul>
-        <li>getFullYear(): Returns the 4-digit year.</li>
-        <div class="code"><code>
-            let date = new Date();
-            console.log(date.getFullYear()); // Output: 2024
-        </code></div>
-        <li>getMonth(): Returns the month (0–11, where 0 = January)</li>
-        <div class="code"><code>
-            console.log(date.getMonth()); // Output: 10 (November)
-        </code></div>
+        <li>Since ES6, you can use shorthand syntax to define methods:</li>
+        <div class="code">
+            <code>
+                let person = { <br>
+                    firstName: "Jane", <br>
+                    lastName: "Doe", <br>
+                    fullName() { <br>
+                      return `${this.firstName} ${this.lastName}`; <br>
+                    } <br>
+                  };
+                   <br>
+                  console.log(person.fullName()); // "Jane Doe"
+                         
+            </code>
+        </div>
+        <button class="remove">REMOVE</button>
     </ul>
+    
+    
+    <h3 style="text-decoration: underline; text-align: center;">
+        NUMBER METHOD
+    </h3>
+    <h4>
+        1. toString()
+    </h4>
+        <p>Converts a number to a string:</p>
+        <div class="code">
+            <code>
+                let num = 123; <br>
+                console.log(num.toString()); // "123" <br>
+                console.log((123).toString()); // "123" <br>
+            </code>
+        </div>
+        <button class="remove">REMOVE</button>
 
+    <h4>2. toFixed()</h4>
+    <p>Formats a number to a fixed number of decimal places:</p>
+    <div class="code">
+        <code>
+            let num = 123.45678; <br>
+            console.log(num.toFixed(2)); // "123.46" <br>
+            console.log(num.toFixed(0)); // "123" <br>
+        </code>
+    </div>
+    <button class="remove">REMOVE</button>  
+
+    <script>
+        let remove = document.querySelectorAll('.remove');
+        
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

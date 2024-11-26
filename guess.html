@@ -88,22 +88,21 @@
     <h2 class="themessage">Start guessing...</h2>
     <input type="number" placeholder="Guess the correct number between 1-20" id="input"><br><br>
     <h3 class="number">The number is ...</h3>
-    <button class="mybtn" onclick="guess()">START</button> <br> <br>
-    <button onclick="checkscore()" class="mybtn">Checkscore</button>
-    <h3>Score: <span id="score">20</span></h3>
-    <h3>High Score: <span id="highscore">0</span></h3>
+    <button class="mybutton" onclick="guess()">START</button> <br> <br>
+    <button onclick="playagain()" class="mybton">PLAY AGAIN</button>
+    <h3>High Score: <span class="highest  score" onclick="checkscore()">0</span></h3>
   </div>
 
   <script>
     let secretNumber = Math.trunc(Math.random()*20)+1;
-    // console.log(secretNumber)
+    console.log(secretNumber);
     let score = 20;
     let highscore = 0;
 
+    let a = document.querySelector('h2');
+    let p = document.getElementById('container')
     function guess(){
       let mynum = Number(document.getElementById('input').value);
-      let a = document.querySelector('h2');
-      let p = document.getElementById('container')
 
     if (mynum < 1 || mynum > 20) {
       a.innerHTML ='Invalid number! Please enter a number between 1 and 20.';
@@ -118,15 +117,37 @@
       p.style.background = 'green';  
       a.style.color = 'black';          
     }
-
-
-      let score = 20;
-      let mybut = Number(document.getElementById('score').value);
-      function checkscore(){
-  
+    
+    let finalshow =document.querySelector('.number');
+    let placeagainbtn =document.querySelector('playagain');
+    let mybutton= document.querySelector('.mybtn');
+    let buttons = document.querySelector('.mybton');
+    let score = 20;
+    let mybut = Number(document.getElementById('score')).value;
+    let no = document.querySelector('.number');
+  }
+  function checkscore(){
+    score = score-4;
+    if(score<=0){
+          no.innerHTML= `The number is ${secretNumber}`;
+          a.textContent='Game over';
+          playagainbtn.style.display= 'inline-block';
+          a.style.color='yellow';
+          buttons.style.display= 'none';
+        }
       }
+    function playagain(){
+
     }
+
+
+
+
+
+
+
   </script>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
