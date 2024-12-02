@@ -80,7 +80,8 @@
     <div class="rall row">
       <div class="pen container col-sm" style="background: gold; padding: 50px; text-align: center; color: black;">
         <h3 class="text-center">RETIREMENT CALCULATOR</h3><br>
-        <input type="text" placeholder="What year were you born?" id="man" oninput="validation()" class="text">
+        <input type="text" placeholder="What year were you born?" id="man" oninput="validation()" class="text"> <br>
+        <span class="lll"></span> <br>
         <button onclick="calculate()" id="moon">Calculate when to retire</button>
         <b>
           <p class="answer"></p>
@@ -92,7 +93,8 @@
       <!-- investment Calculator -->
       <div class="col-sm container" style=" background: blue;padding: 50px;text-align: center; color: white;">
         <h3 class="text-center">INVESTMENT CALCULATOR</h3><br>
-        <input type="text" placeholder="How much do you want to invest?" id="mall" oninput="validation()" class="text">
+        <input type="text" placeholder="How much do you want to invest?" id="mall" oninput="validate()" class="ola"> <br>
+        <span class="ll"></span> <br>
         <select id="sel">
           <option selected value="1">Duration</option>
           <option value="3">3 months</option>
@@ -108,7 +110,8 @@
 
       <div class="col-sm container" style=" background: purple;;text-align: center; color: white; padding: 50px;">
         <h3 class="text-center">LOAN CALCULATOR</h3><br>
-        <input type="text" placeholder="How much do you want to invest?" id="call" oninput="validation()" class="text">
+        <input type="text" placeholder="How much do you want to invest?" id="call" oninput="lolok()" class="gaga"> <br>
+        <span class="ff"></span> <br>
         <select id="choose">
           <option selected value="1">Duration</option>
           <option value="3">3 months</option>
@@ -121,12 +124,14 @@
         <button style="margin-top: 10px;" onclick="loan()">Calculate your Loan amount</button>
         <p class="scam"></p>
       </div>
-      <div style=" background: red ;padding: 50px;text-align: center; color: white;" class="container col-sm">
+      <div style=" background: greenyellow;padding: 50px;text-align: center; color: white;" class="container col-sm">
         <h1>SIMPLE CALCULATOR</h1>
-        <input type="text" placeholder="FirstNo" id="input1" oninput="validation()" class="text"> <br>
+        <input type="text" placeholder="FirstNo" id="input1" oninput="simp()" class="lack"> <br>
         <span class="currentsymbol"></span> <br>
-        <input type="text" placeholder="SecNo" id="input2" oninput="validation()" class="text">
-        <span class="outputanswer"></span> <br>
+        <span class="final"></span> <br>
+        <input type="text" placeholder="SecNo" id="input2" oninput="simple()" class="lac">
+        <span class="outputanswer"></span> <br> <br>
+        <span class="finalle"></span> <br>
         <button class="but" value="add">+</button>
         <button class="but" value="times">*</button>
         <button class="but" value="min">-</button>
@@ -216,11 +221,67 @@
       function validation() {
       let text = document.querySelector('.text').value;
       let myForm = /^[0-9]+$/; 
+      let p = document.querySelector('.lll');
 
       if (text === "" || !myForm.test(text)) {
-          console.log('Incorrect input');
+          p.textContent='Incorrect input';
+          p.style.color ='red';
       } else{
-          console.log('Correct input');
+          p.textContent='Correct input';
+          p.style.color ='green';
+      }
+      }
+      function validate() {
+      let text = document.querySelector('.ola').value;
+      let myForm = /^[0-9]+$/; 
+      let p = document.querySelector('.ll');
+
+      if (text === "" || !myForm.test(text)) {
+          p.textContent='Incorrect input';
+          p.style.color ='red';
+      } else{
+          p.textContent='Correct input';
+          p.style.color ='green';
+      }
+      }
+
+      function lolok() {
+      let text = document.querySelector('.gaga').value;
+      let myForm = /^[0-9]+$/; 
+      let p = document.querySelector('.ff');
+
+      if (text === "" || !myForm.test(text)) {
+          p.textContent='Incorrect input';
+          p.style.color ='red';
+      } else{
+          p.textContent='Correct input';
+          p.style.color ='green';
+      }
+      }
+      function simp() {
+      let text = document.querySelector('.lack').value;
+      let myForm = /^[0-9]+$/; 
+      let p = document.querySelector('.final');
+
+      if (text === "" || !myForm.test(text)) {
+          p.textContent='Incorrect input';
+          p.style.color ='red';
+      } else{
+          p.textContent='Correct input';
+          p.style.color ='green';
+      }
+      }
+      function simple() {
+      let text = document.querySelector('.lac').value;
+      let myForm = /^[0-9]+$/; 
+      let p = document.querySelector('.finalle');
+
+      if (text === "" || !myForm.test(text)) {
+          p.textContent='Incorrect input';
+          p.style.color ='red';
+      } else{
+          p.textContent='Correct input';
+          p.style.color ='green';
       }
       }
 
