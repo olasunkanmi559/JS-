@@ -65,17 +65,9 @@
             </div>
         </div>
     </nav>
-
-    <div class="container">
-        <h1>Sum Calculator</h1>
-        <input type="text" id="numbersInput" placeholder="Enter numbers separated by commas">
-        <button id="calculateButton">Calculate Sum</button>
-        <p class="result" id="result">Sum: <span id="sum">0</span></p>
-    </div> <br> <br>
-
     <div class="container">
         <h1>JavaScript Tasks</h1>
-
+        <br> <br>
         <section>
             <h2>Task 1: Destructuring and Rest Operator</h2>
             <p id="task1Result"></p>
@@ -104,21 +96,6 @@
 
 
     <script>
-        document.getElementById('calculateButton').addEventListener('click', function () {
-            const input = document.getElementById('numbersInput').value;
-            const numbers = input.split(',').map(num => parseFloat(num.trim()));
-            const sum = calculateSum(...numbers);
-            document.getElementById('sum').textContent = sum;
-        });
-
-        function calculateSum(...numbers) {
-            return numbers.reduce((accumulator, currentValue) => accumulator + (currentValue || 0), 0);
-        }
-
-
-        // For second question
-
-
 
         let person = {
             name: "Alice",
@@ -127,6 +104,7 @@
             profession: "Engineer",
         }
         let { name, age, ...details } = person;
+        console.log(details)
 
         document.getElementById('task1Result').textContent = `Name: ${name}, Age: ${age}, Details: ${details}`;
 
@@ -157,13 +135,19 @@
             }
             return animalfarm;
         }
+        let generatedNumbers = gennoengine();
+        let totalSum = calculateSum(...generatedNumbers);
+
+        document.getElementById('task3Numbers').textContent = `[${generatedNumbers}]`;
+        document.getElementById('task3Sum').textContent = totalSum;
+
 
         function calculateSum(...numbers) {
             return numbers.reduce((nums, secnums) => nums + secnums, 0);
         }
-        
+
         document.getElementById('task4Description').textContent =
-            "Rest operator gathers multiple elements into a single array or object, while Spread operator expands elements from an array or object into individual parts. Both use the `...` syntax.";
+            "Rest operator: gathers multiple elements into a single array or object, While Spread: operator expands elements from an array or object into individual parts. Both use the `...` syntax.";
 
     </script>
 
