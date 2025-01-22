@@ -92,18 +92,12 @@
           function Activity() { <br>
             if (currentDay === 0) { <br>
               output.textContent = "It's Sunday, get up and go to Church"; <br>
-            } else if (currentDay === 1) { <br>
-              output.textContent = "It's Monday get up and go to work it is first day of the week.";<br>
-            } else if (currentDay === 2) {<br>
-              output.textContent = "It's Tuesday, get up from bed and go to work";<br>
-            } else if (currentDay === 3) {<br>
-              output.textContent = "It's Wednesday go to work lazybones";<br>
-            } else if (currentDay === 4) {<br>
-              output.textContent = "It's Thursday go to work";<br>
-            } else if (currentDay === 5) {<br>
-              output.textContent = "It's Friday THANK GOD it is Friday.";<br>
-            } else if (currentDay === 6) {<br>
-              output.textContent = "Enjoy your weekend! It's Saturday.";<br>
+            } else if (currentDay === 1 || currentDay <= 4) { <br/>
+              output.textContent = `it's ${tunji} get up and go to work.`; <br>
+            } else if (currentDay === 5) { <br>
+              output.textContent = "It's Friday THANK GOD it is Friday."; <br>
+            } else if (currentDay === 6) { <br>
+              output.textContent = "Enjoy your weekend! It's Saturday.";  <br>
             }
           }
       </code>
@@ -113,19 +107,13 @@
     const output = document.getElementById('output');
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const currentDay = new Date().getDay();
-    console.log(weekDays[currentDay]);
+    const tunji = weekDays[currentDay];
 
     function Activity() {
       if (currentDay === 0) {
         output.textContent = "It's Sunday, get up and go to Church";
-      } else if (currentDay === 1) {
-        output.textContent = "It's Monday get up and go to work it is first day of the week.";
-      } else if (currentDay === 2) {
-        output.textContent = "It's Tuesday, get up from bed and go to work";
-      } else if (currentDay === 3) {
-        output.textContent = "It's Wednesday go to work lazybones";
-      } else if (currentDay === 4) {
-        output.textContent = "It's Thursday go to work";
+      } else if (currentDay === 1 || currentDay <= 4) {
+        output.textContent = `it's ${tunji} get up and go to work.`;
       } else if (currentDay === 5) {
         output.textContent = "It's Friday THANK GOD it is Friday.";
       } else if (currentDay === 6) {
